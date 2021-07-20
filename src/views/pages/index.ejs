@@ -1,12 +1,23 @@
 <%- include('../includes/header') %>
     <header class = "main-header">
         <a href = "/" class = "home-link">Home</a>
-        <nav>
-            <ul>
-                <a href = "/login" class = "home-nav-link">Login</a>
-                <a href = "/signup" class = "home-nav-link">Sign up</a>
-            </ul>
-        </nav>
     </header>
-    <h1>Hello to test</h1>
+    <div class = "container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1>Inicio</h1>
+                <form action = "/login" method = "post" class = "mx-auto p-3 bg-light">
+                    <div class = "form-group">
+                        <label for= "username">Nombre de usuario</label>
+                        <input type = "text" name = "username" class = "form-control" id = "username" placeholder = "Nombre de Usuario" required>
+                    </div>
+                    <div class = "form-group">
+                        <label for= "password">Contraseña</label>
+                        <input type = "password" name = "password" class = "form-control" id = "password" placeholder = "Nombre de Usuario" required>
+                    </div>
+                    <button type = "submit" class = "btn btn-success">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
 <%- include('../includes/footer') %>
