@@ -10,10 +10,20 @@
                     <div class = "form-group">
                         <label for= "username">Nombre de usuario</label>
                         <input type = "text" name = "username" class = "form-control" id = "username" placeholder = "Nombre de Usuario" required>
+                        <% if (Object.keys(errs).includes('inexistent_user')) { %>
+                            <div class = "alert alert-danger">
+                                <%= errs.inexistent_user %>
+                            </div>
+                        <% } %>
                     </div>
                     <div class = "form-group">
                         <label for= "password">Contraseña</label>
                         <input type = "password" name = "password" class = "form-control" id = "password" placeholder = "Nombre de Usuario" required>
+                        <% if (Object.keys(errs).includes('wrong_password')) { %>
+                            <div class = "alert alert-danger">
+                                <%= errs.wrong_password %>
+                            </div>
+                        <% } %>
                     </div>
                     <button type = "submit" class = "btn btn-success">Login</button>
                 </form>
