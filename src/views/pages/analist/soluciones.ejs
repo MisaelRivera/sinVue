@@ -1,0 +1,39 @@
+<%- include('../../includes/header') -%>
+    <main class = "main-container">
+        <%- include('../../includes/aside_nav') -%>
+        <section class = "content">
+            <form action = "/analist/solutions" method = "post" class = "standard-form">
+                <h2>Crear Soluciones</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "preparation-date">Fecha de preparacion</label>
+                            <input type = "date" name = "preparation_date" class = "form-control" id = "preparation-date" placeholder = "Fecha de preparacion" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "name">Nombre</label>
+                            <input type = "text" name = "name" class = "form-control" id = "name" placeholder = "Nombre" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "chemical-abreviation">Abreviacion quimica</label>
+                            <input type = "text" name = "chemical_abreviation" class = "form-control" id = "chemical-abreviation" placeholder = "Abreviacion quimica" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "grams">Gramos</label>
+                            <input type = "number" name = "grams" class = "form-control" id = "grams" step = "0.0001" placeholder = "Gramos" required>
+                        </div>
+                    </div>
+                </div>
+                <button class = "btn btn-success">Guardar</button>
+            </form>
+        </section>
+    </main>
+<%- include('../../includes/footer') -%>
