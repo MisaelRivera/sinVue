@@ -28,7 +28,7 @@ router.post('/login', urlencoded, async (req, res) => {
         } else {
             req.session.username = user.username;
             req.session.role;
-            res.redirect('/analist');
+            res.redirect('/user');
         }
     }
 });

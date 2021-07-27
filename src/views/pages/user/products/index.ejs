@@ -1,0 +1,17 @@
+<%- include('../../../includes/header') -%>
+    <main class = "main-container">
+        <%- include('../../../includes/aside_nav') -%>
+        <section class = "products-container content">
+            <% for (product in products) { %>
+                <div class = "product-card">
+                    <h2 class = "product-title">
+                        <%= product.name %>
+                    </h2>
+                    <img src = "<%= product.img_url %>" class = "product-img">
+                    <p class = "product-price"> <%= product.price %> </p>
+                    <button class = "btn btn-primary">Ver detalles</button>
+                </div>
+            <% } %> 
+        </section>
+    </main>
+<%- include('../../../includes/footer') -%> 

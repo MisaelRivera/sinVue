@@ -1,0 +1,45 @@
+<%- include('../../../includes/header') -%>
+    <main class = "main-container">
+        <%- include('../../includes/aside_nav') -%>
+        <section class = "content">
+            <form action = "/user/products" method = "post" class = "standard-form">
+                <h2>Registrar Producto</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "name">Nombre del producto</label>
+                            <input type = "text" name = "name" class = "form-control" id = "name" placeholder = "Nombre del Producto" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "price">Precio</label>
+                            <input type = "number" step = "0.01" name = "price" class = "form-control" id = "price" placeholder = "Precio" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "brand">Marca</label>
+                            <input type = "text" name = "brand" class = "form-control" id = "brand" placeholder = "Marca" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "stock">Unidades en almacen</label>
+                            <input type = "number" name = "stock" class = "form-control" id = "stock" placeholder = "Unidades en almacen" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for = "img-url">Imagen del producto</label>
+                            <input type = "url" name = "img_url" class = "form-control" id = "img-url" placeholder = "Imagen del producto" required>
+                        </div>
+                    </div>
+                </div>
+                <button class = "btn btn-success">Registrar</button>
+            </form>
+        </section>
+    </main> 
+<%- include('../../../includes/footer') -%>
