@@ -1,11 +1,15 @@
 require('dotenv').config();
-const express = require('express');
+const express = require('express'),
+      path = require('path');
 const app = express(),
-      path = require('path'),
+      includes = path.resolve('src/views/includes'),
       PORT = 3000,
       pagesRouter = require('./routes/pages'),
       userRouter = require('./routes/user'),
       session = require('express-session');
+
+
+global.includes = includes;
 
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');

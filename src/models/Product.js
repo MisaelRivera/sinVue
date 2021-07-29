@@ -27,7 +27,12 @@ const Product = sequelize.define('Product', {
     stock: {
         type: DataTypes.INTEGER,
         allowNull: false,
-    }
+    },
+
+    imgUrl: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+    },
 }, {
     timestamps: false,    
 });

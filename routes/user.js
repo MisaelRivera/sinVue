@@ -22,4 +22,9 @@ router.get('/products', async (req, res) => {
     res.render('pages/user/products', { products });
 });
 
+router.get('/product', async (req, res) => {
+    const errors = {};
+    res.render('pages/user/products/product');
+});
+
 module.exports = router;
