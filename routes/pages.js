@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     const errs = [];
     if (req.query.inexistent_user) errs.push({ inexistent_user: 'El usuario ingresado no se encuentra registrado'});
     if (req.query.wrong_password) errs.push({ wrong_password: 'La contraseña es incorrecta'});
-    res.render('pages/index', { errs, objectKeyInArray, getObjectPropertyFromArray });
+    res.render('pages/index', { errs, objectKeyInArray, getObjectPropertyFromArray, includes: req.includes });
 });
 
 router.post('/login', urlencoded, async (req, res) => {

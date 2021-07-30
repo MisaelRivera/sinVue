@@ -9,11 +9,15 @@ const app = express(),
       session = require('express-session');
 
 
-global.includes = includes;
+function setIncludesPath (req, res, next) {
+    req.includes = includes;
+    next();
+}
 
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
 
+app.use(setIncludesPath);
 
 app.use(session({
     secret: process.env.SECRET,

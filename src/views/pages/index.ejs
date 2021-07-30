@@ -1,4 +1,4 @@
-<%- include(global.includes + '/header') %>
+<%- include(includes + '/header') %>
     <header class = "main-header">
         <a href = "/" class = "home-link">Home</a>
     </header>
@@ -11,7 +11,7 @@
                         <label for= "username">Nombre de usuario</label>
                         <input type = "text" name = "username" class = "form-control" id = "username" placeholder = "Nombre de Usuario" required>
                         <% if (objectKeyInArray(errs, 'inexistent_user')) { %>
-                            <div class = "alert alert-danger">
+                            <div class = "alert alert-danger mt-2">
                                 <%= getObjectPropertyFromArray(errs, 'inexistent_user') %>
                             </div>
                         <% } %>
@@ -20,7 +20,7 @@
                         <label for= "password">Contraseña</label>
                         <input type = "password" name = "password" class = "form-control" id = "password" placeholder = "Nombre de Usuario" required>
                         <% if (objectKeyInArray(errs, 'wrong_password')) { %>
-                            <div class = "alert alert-danger">
+                            <div class = "alert alert-danger mt-2">
                                 <%= getObjectPropertyFromArray(errs, 'wrong_password') %>
                             </div>
                         <% } %>
@@ -30,4 +30,4 @@
             </div>
         </div>
     </div>
-<%- include(global.includes + '/footer') %>
+<%- include(includes  + '/footer') %>
